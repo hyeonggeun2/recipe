@@ -4,7 +4,8 @@
 {% block content %}
       <h2 class="sub_title">회원가입</h2>
       <div class="container">
-        <form method="POST" action="">
+        <form method="POST" action="{% url 'members:signup' %}">
+          {% csrf_token %}
           <table>
             <tr>
               <th>아이디</th>
@@ -12,14 +13,14 @@
             </tr>
             <tr>
               <th>비밀번호</th>
-              <td><input type="password" name="password1"/></td>
+              <td><input type="password" name="password"/></td>
             </tr>
             <tr>
               <th>이름</th>
               <td><input type="text" name="name"/></td>
             </tr>
           </table>
-          <button>가입하기</button>
+          <button class="btn">가입하기</button>
         </form>
       </div>
 {% endblock %}

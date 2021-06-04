@@ -52,10 +52,10 @@ a, ul, li {
 }
 
 .nav_bar {
-  width: 200px;
+  width: 150px;
   display: flex;
   justify-content: space-evenly;
-  margin-right:30px;
+  margin-right:20px;
   font-weight: 700;
 }
 
@@ -151,4 +151,14 @@ input {
   line-height: 52px;
   color:white !important;
   background-color: darkslategray;
+}
+
+#first_text{
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#first_text span {
+  font-weight: 700;
 }

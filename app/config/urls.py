@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from config import settings
 from config.views import index_view
@@ -23,6 +23,8 @@ from config.views import index_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view, name="index"),
+    path('members/', include('members.urls')),
+    path('refrigerator/', include('recipes.urls')),
 ]
 
 # /media/로 접근시 폴더로 이동하게 설정
