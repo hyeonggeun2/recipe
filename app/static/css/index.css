@@ -1,0 +1,154 @@
+body, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a, ul, li {
+  text-decoration: none;
+  color: black;
+}
+
+#index{
+  margin-top: 40vh;
+}
+.sub_title{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer{
+  text-align: center;
+  background-color: darkslategray;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  color:white;
+  font-size:12px;
+  line-height: 30px;
+  position: fixed;
+}
+
+.footer p{
+  margin-bottom: 0px;
+}
+
+.nav {
+  width: 100vw;
+  height: 50px;
+  background-color: darkslategray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.nav_title {
+  margin-left: 30px;
+  color: white;
+  font-family: "Jalnan";
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav_bar {
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right:30px;
+  font-weight: 700;
+}
+
+.nav_item {
+  color: white;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.container {
+  border: 2px solid gray;
+  width: 500px;
+  height:300px;
+  margin: 50px auto 142px auto;
+}
+
+th{
+  padding-left:20px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 30px;
+  width: 100px;
+}
+
+th, td{
+  padding-top:15px;
+  padding-left: 0px;
+}
+
+table {
+  margin:0 auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+input {
+  width: 150px;
+  height: 30px;
+}
+
+.btn{
+  width: 150px;
+  height: 50px;
+  color: white;
+  background-color: darkslategray;
+  border: none;
+  margin-left: 175px;
+  font-size: 15px;
+}
+
+.login_box{
+  width:400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  height:100px;
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.login_box form{
+  display: flex;
+}
+
+.login_box button{
+  width: 150px;
+  background-color: darkslategray;
+  border: none;
+  color: white;
+  margin-left: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.login_box input{
+  width: 200px;
+  height:40px;
+  margin-left: 20px;
+}
+
+.login_signup{
+  margin: 35px auto 0 auto;
+  padding-bottom: 40px;
+  width: 400px;
+  display: flex;
+  font-size: 13px;
+  justify-content: space-around;
+}
+
+.login_signup a{
+  width: 100px;
+  text-align: center;
+  line-height: 52px;
+  color:white !important;
+  background-color: darkslategray;
+}
