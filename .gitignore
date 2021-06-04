@@ -382,4 +382,21 @@ tags
 # Persistent undo
 [._]*.un~
 
+### JupyterNotebooks ###
+# gitignore template for Jupyter Notebooks
+# website: http://jupyter.org/
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+app/*.ipynb
+
+# Remove previous ipynb_checkpoints
+#   git rm -r .ipynb_checkpoints/
+
+# End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks
+
 # End of https://www.toptal.com/developers/gitignore/api/git,python,pycharm,linux,django,vim
