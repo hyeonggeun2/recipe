@@ -1,0 +1,36 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <a class="nav_title" href="/">RECIPE</a>
+        <div class="nav_bar">
+            {% if request.user.is_authenticated %}
+            <a class="nav_item" href="">내 냉장고</a>
+            <a class="nav_item" href="">로그아웃</a>
+            {% else %}
+            <a class="nav_item" href="">회원가입</a>
+            <a class="nav_item" href="">로그인</a>
+            {% endif %}
+        </div>
+    </nav>
+</header>
+{% block content %}
+{% endblock %}
+<div>
+    <footer class="footer">
+        <p>&copy; Copyright 2021 by Hyeonggeun Oh</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from config import settings
+from config.views import index_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index_view, name="index"),
 ]
 
 # /media/로 접근시 폴더로 이동하게 설정
