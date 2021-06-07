@@ -52,7 +52,7 @@ a, ul, li {
 }
 
 .nav_bar {
-  width: 150px;
+  width: 200px;
   display: flex;
   justify-content: space-evenly;
   margin-right:20px;
@@ -91,9 +91,12 @@ table {
   margin-top: 20px;
 }
 
-input {
+input, select {
   width: 150px;
   height: 30px;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 .btn{
@@ -161,4 +164,108 @@ input {
 
 #first_text span {
   font-weight: 700;
+}
+
+.refrigerator {
+  border: 2px solid blue;
+  margin: 20px auto;
+  width:500px;
+  padding: 0 20px;
+}
+
+#freeze {
+  margin-top: 30px;
+  height: 250px;
+}
+
+#cold {
+  height: 500px;
+}
+
+#go_recipe{
+  display: block;
+  text-align: center;
+  font-size: 22px;
+}
+
+.refrigerator_title{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.add_btn{
+  display: inline-block;
+  color: white;
+  background: gray;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+#refrigerator_container{
+  display: flex;
+  justify-content: center;
+}
+
+#freeze_btn{
+  top: 235px;
+  right: 50px;
+}
+
+#cold_btn{
+  top: 760px;
+  right: 95px;
+}
+
+#sup_text{
+  font-size: 11px;
+  padding-top:0px;
+}
+
+#add_ingredient{
+  font-size: 11px;
+  background-color: gray;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 2px;
+  position: relative;
+  top: -200px;
+  left: 390px;
+  color: white;
+}
+
+#ingredient_table{
+  margin-top: 50px;
+}
+
+.refrigerator_item{
+  font-weight: 700;
+}
+
+.refrigerator_item span{
+  font-weight: 400;
+}
+
+.left_days {
+  color: red;
+}
+
+.del_btn {
+  display: inline-block;
+  background-color: gray;
+  height: 15px;
+  width: 15px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 10px;
+  border-radius: 5px;
 }

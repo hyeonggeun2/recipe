@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2 class="sub_title">{{ingredient.ingredient.name}}</h2>
+
+<div class="container">
+    <form method="POST" action="{% url 'recipes:modify_ingredient' ingredient=ingredient.pk %}">
+        {% csrf_token %}
+        <input type="hidden" name="state" value="{{ state }}">
+        <table>
+            <tr>
+                <th>식재료</th>
+                <td>
+                    {{ingredient.ingredient.name}}
+                </td>
+            </tr>
+            <tr>
+                <th>구매일</th>
+                <td>{{ingredient.buy_date}}</td>
+            </tr>
+            <tr>
+                <th>양(g)</th>
+                <td><input type="text" name="quantity" placeholder="(개수, g 등)" value="{{ ingredient.quantity }}"/></td>
+            </tr>
+        </table>
+        <button class="btn">수정하기</button>
+    </form>
+</div>
+{% endblock %}
