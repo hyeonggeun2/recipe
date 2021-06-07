@@ -28,4 +28,14 @@ class MyIngredientInfo(models.Model):
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
     refrigerator = models.ForeignKey(Refrigerator, on_delete=models.CASCADE)
     buy_date = models.DateField(default=datetime.date.today)
-    quantity = models.IntegerField()
+    quantity = models.CharField(max_length=30)
+
+    def left_days(self):
+        shelf_life = self.ingredient.shelf_life
+        keeping_date = self.buy_date + datetime.timedelta(days=shelf_life)
+        left = keeping_date - datetime.datetime.today().date()
+        left_days = left.days
+
+        if shelf_life - left_days > shelf_life:
+            return -left_days
+        return left_days

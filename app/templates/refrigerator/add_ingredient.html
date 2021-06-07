@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<h2 class="sub_title">식재료 추가</h2>
+
+<div class="container">
+    <form method="POST" action="{% url 'recipes:add_ingredient' %}">
+        {% csrf_token %}
+        <input type="hidden" name="state" value="{{ state }}">
+        <table id="ingredient_table">
+            <tr>
+                <th>식재료명</th>
+                <td>
+                    <input type="text" name="name"/>
+                </td>
+            </tr>
+            <tr>
+                <th>유통기한(일)</th>
+                <td>
+                    <input type="text" name="shelf_life" placeholder=" 숫자만 입력"/>
+                </td>
+            </tr>
+        </table>
+        <button class="btn">추가하기</button>
+    </form>
+</div>
+{% endblock %}

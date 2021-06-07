@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="refrigerator_container">
+    <div id="pos_container">
+        <div class="refrigerator" id="freeze">
+            <p class="refrigerator_title">냉동실</p>
+            {% for item in freeze %}
+            <a href="{% url 'recipes:modify_ingredient' ingredient=item.pk %}">
+                <div class="refrigerator_item">
+                    {{ item.ingredient.name }}
+                    <span>- 남은 유통기한: </span>
+                    <span class="left_days">{{ item.left_days }}일</span>
+                    <span> ({{ item.quantity }})</span>
+                    <a class="del_btn" href="{% url 'recipes:delete_ingredient' ingredient=item.pk %}">x</a>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="refrigerator" id="cold">
+            <p class="refrigerator_title">냉장고</p>
+            {% for item in cold %}
+            <a href="{% url 'recipes:modify_ingredient' ingredient=item.pk %}">
+                <div class="refrigerator_item">
+                    {{ item.ingredient.name }}
+                    <span>- 남은 유통기한: </span>
+                    <span class="left_days">{{ item.left_days }}일</span>
+                    <span> ({{ item.quantity }})</span>
+                    <a class="del_btn" href="{% url 'recipes:delete_ingredient' ingredient=item.pk %}">x</a>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <a id="go_recipe" href="#">내 재료와 맞는 레시피 보러가기</a>
+    </div>
+    <a class="add_btn" id="freeze_btn" href="{% url 'recipes:add' %}?state=freeze">+</a>
+    <a class="add_btn" id="cold_btn" href="{% url 'recipes:add' %}?state=cold">+</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if state == 'freeze' %}
+<h2 class="sub_title">냉동실에 식재료 추가</h2>
+{% else %}
+<h2 class="sub_title">냉장실에 식재료 추가</h2>
+{% endif %}
+
+<div class="container">
+    <form method="POST" action="{% url 'recipes:add' %}">
+        {% csrf_token %}
+        <input type="hidden" name="state" value="{{ state }}">
+        <table>
+            <tr>
+                <th>식재료</th>
+                <td>
+                    <select name="ingredient">
+                        <option value="">식재료 선택</option>
+                        {% for ingredient in ingredients %}
+                        <option value="{{ ingredient.name }}">{{ ingredient.name }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td id="sup_text">없는 재료는 직접 추가할 수 있어요!</td>
+            </tr>
+            <tr>
+                <th>구매일</th>
+                <td><input type="date" name="date"/></td>
+            </tr>
+            <tr>
+                <th>양</th>
+                <td><input type="text" name="quantity" placeholder="(개수, g 등)"/></td>
+            </tr>
+        </table>
+        <button class="btn">추가하기</button>
+    </form>
+    <a id="add_ingredient" href="{% url 'recipes:add_ingredient' %}?state={{ state }}">추가하기</a>
+</div>
+{% endblock %}

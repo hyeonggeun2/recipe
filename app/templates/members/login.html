@@ -5,7 +5,8 @@
 <h2 class="sub_title">로그인</h2>
 <div class="container">
     <div class="login_box">
-        <form>
+        <form method="POST" action="{% url 'members:login' %}">
+            {% csrf_token %}
             <div>
                 <input type="text" name="username" placeholder="아이디"/>
                 <input type="password" name="password" placeholder="비밀번호"/>
@@ -15,7 +16,7 @@
     </div>
     <div class="login_signup">
         <p>회원가입을 하시면 다양하고 특별한<br/>혜택이 준비되어 있습니다.</p>
-        <a href="/signup">회원가입</a>
+        <a href="{% url 'members:signup' %}">회원가입</a>
     </div>
 </div>
 {% endblock %}
