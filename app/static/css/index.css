@@ -168,7 +168,7 @@ input, select {
 
 .refrigerator {
   border: 2px solid blue;
-  margin: 20px auto;
+  margin: 10px auto;
   width:500px;
   padding: 0 20px;
 }
@@ -186,6 +186,10 @@ input, select {
   display: block;
   text-align: center;
   font-size: 22px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .refrigerator_title{
@@ -213,6 +217,7 @@ input, select {
 #refrigerator_container{
   display: flex;
   justify-content: center;
+  margin-left: 100px;
 }
 
 #freeze_btn{
@@ -221,7 +226,7 @@ input, select {
 }
 
 #cold_btn{
-  top: 760px;
+  top: 750px;
   right: 95px;
 }
 
@@ -268,4 +273,29 @@ input, select {
   color: white;
   line-height: 10px;
   border-radius: 5px;
+}
+
+.ingredient_check_box {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#recipe_container{
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.recipe_card{
+  width: 250px;
+  padding: 10px;
+}
+
+.recipe_card img{
+  width: 250px;
+  height: 250px;
 }

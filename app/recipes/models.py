@@ -36,6 +36,4 @@ class MyIngredientInfo(models.Model):
         left = keeping_date - datetime.datetime.today().date()
         left_days = left.days
 
-        if shelf_life - left_days > shelf_life:
-            return -left_days
         return left_days
